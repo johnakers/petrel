@@ -1,0 +1,9 @@
+# Mac nonsense
+.DS_Store
+
+# Don't checkin Gemfile.lock
+# See: http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/
+Gemfile.lock
+
+# Ignore any created gems
+petrel-*
