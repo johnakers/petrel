@@ -68,9 +68,9 @@ RSpec.describe Petrel do
 
     it 'returns the current weather' do
       expect(HTTParty).to receive(:get).
-        with("#{Petrel.url}/weather", query: {
+        with("#{Petrel.configuration.url}/weather", query: {
           q: 'San Francisco',
-          appid: Petrel.api_key
+          appid: Petrel.configuration.api_key
         }).
         and_return(weather_response)
 

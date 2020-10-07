@@ -1,19 +1,10 @@
 module Petrel
-  module Configuration
-    BASE_URL = 'https://api.openweathermap.org/data/2.5'
+  class Configuration
+    attr_reader :url
+    attr_accessor :api_key
 
-    attr_writer :api_key
-
-    def api_key
-      @api_key
-    end
-
-    def url
-      BASE_URL
-    end
-
-    def configure
-      yield self
+    def initialize
+      @url = 'https://api.openweathermap.org/data/2.5'
     end
   end
 end

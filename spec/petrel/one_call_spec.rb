@@ -114,10 +114,10 @@ RSpec.describe Petrel do
 
     it 'returns the current weather' do
       expect(HTTParty).to receive(:get).
-        with("#{Petrel.url}/onecall", query: {
+        with("#{Petrel.configuration.url}/onecall", query: {
           lat: 37,
           lon: -122,
-          appid: Petrel.api_key
+          appid: Petrel.configuration.api_key
         }).
         and_return(one_call_response)
 

@@ -9,8 +9,8 @@ RSpec.describe Petrel::Configuration do
         c.api_key = api_key
       end
 
-      expect(Petrel.api_key).to eq(api_key)
-      expect(Petrel.url).to eq(
+      expect(Petrel.configuration.api_key).to eq(api_key)
+      expect(Petrel.configuration.url).to eq(
         'https://api.openweathermap.org/data/2.5'
       )
     end
